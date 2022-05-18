@@ -1,10 +1,5 @@
 # include "Node.h"
 
-// constructor
-Node::Node (){
-    //
-}
-
 void Node::setData(int val){
     data = val;
 }
