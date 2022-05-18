@@ -1,11 +1,14 @@
 # include "LinkedList.h"
 # include "Node.h"
 # include <sstream>
+# include <cstring>
+
 
 // Function used to count number of spaces
 int space_counter(string input){
     int counter = 0;
-    for (int i = 0; i < input.length(); i++){
+    int size = input.size();
+    for (int i = 0; i < size ; i++){
         if (isspace(input.at(i)))
             counter ++;
     }
@@ -62,5 +65,5 @@ int main (){
     LinkedList list(input_array, array_size);
 
     exec(list, command, param[0], param[1]);
-    
+    // g++ -std=c++11 -o main.out -O2 -Wall *.cpp
 }
