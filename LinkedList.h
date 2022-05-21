@@ -12,7 +12,7 @@ class LinkedList {
     public:
         LinkedList();
         LinkedList(int array[], int size);
-        ~LinkedList();
+        //~LinkedList();
         void addFront(int);
         void addEnd(int);
         void addAtPosition(int, int);
