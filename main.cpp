@@ -1,14 +1,11 @@
 # include "LinkedList.h"
 # include "Node.h"
 # include <sstream>
-# include <cstring>
-
 
 // Function used to count number of spaces
 int space_counter(string input){
     int counter = 0;
-    int size = input.size();
-    for (int i = 0; i < size ; i++){
+    for (int i = 0; i < input.length(); i++){
         if (isspace(input.at(i)))
             counter ++;
     }
@@ -29,7 +26,7 @@ void exec (LinkedList list_input, string cmd, int param1, int param2){
     else if (cmd == "DE")
         list_input.deleteEnd();
     else if (cmd == "DP")
-        list_input.deleteAtPosition(param1);
+        list_input.deletePosition(param1);
     else if (cmd == "GI")
         list_input.getItem(param1);
     else 
@@ -65,5 +62,5 @@ int main (){
     LinkedList list(input_array, array_size);
 
     exec(list, command, param[0], param[1]);
-    // g++ -std=c++11 -o main.out -O2 -Wall *.cpp
+    
 }

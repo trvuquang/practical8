@@ -105,7 +105,7 @@ void LinkedList::deleteEnd(){
     temp->setNode(NULL);
 }
 
-void LinkedList::deleteAtPosition(int position){
+void LinkedList::deletePosition(int position){
     Node * temp = head;
     for (int i = 2; i < position; i++){
         if(temp->getNode() != NULL)
